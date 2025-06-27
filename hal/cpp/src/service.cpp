@@ -28,7 +28,7 @@ int main(int /* argc */, char* /* argv */[]) {
         return 1;
     }
 
-    ALOGI("Grade Manager Service Ready");
+    ALOGI("Grade Manager C++ Service Ready");
 
     ABinderProcess_joinThreadPool();
 

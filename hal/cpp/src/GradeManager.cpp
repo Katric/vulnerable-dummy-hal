@@ -7,34 +7,39 @@
 #include <utils/Log.h>
 
 namespace aidl {
-namespace android {
-namespace hardware {
-namespace grademanager {
+    namespace android {
+        namespace hardware {
+            namespace grademanager {
 
-GradeManager::GradeManager() {
-   grades = new int[30];
-}
-ndk::ScopedAStatus GradeManager::getGrade(int32_t studentIdx, int32_t* out) {
-    return ndk::ScopedAStatus::ok();
-}
+                GradeManager::GradeManager() {
+                    grades = new int[30];  
+                }
 
-ndk::ScopedAStatus GradeManager::setGrade(int32_t studentIdx, int32_t grade) {
-    return ndk::ScopedAStatus::ok();
-}
+                ndk::ScopedAStatus GradeManager::getGrade(int32_t studentIdx, int32_t* out) {
+                    *out = grades[studentIdx];
+                    return ndk::ScopedAStatus::ok();
+                }
 
-ndk::ScopedAStatus GradeManager::clearGradesAndSetGradeListToNull() {
-    return ndk::ScopedAStatus::ok();
-}
+                ndk::ScopedAStatus GradeManager::setGrade(int32_t studentIdx, int32_t grade) {
+                    grades[studentIdx] = grade;
+                    return ndk::ScopedAStatus::ok();
+                }
 
-ndk::ScopedAStatus GradeManager::clearGradesAndFreeGradeList() {
-    return ndk::ScopedAStatus::ok();
-}
+                ndk::ScopedAStatus GradeManager::clearGradesAndSetGradeListToNull() {
+                    grades = nullptr;
+                    return ndk::ScopedAStatus::ok();
+                }
 
-ndk::ScopedAStatus GradeManager::initializeGradeList() {
-    return ndk::ScopedAStatus::ok();
-}
+                ndk::ScopedAStatus GradeManager::clearGradesAndFreeGradeList() {
+                    delete[] grades;
+                    return ndk::ScopedAStatus::ok();
+                }
 
-}
-}
-}
+                ndk::ScopedAStatus GradeManager::initializeGradeList() {
+                    grades = new int[30];
+                    return ndk::ScopedAStatus::ok();
+                }
+            }
+        }
+    }
 }
