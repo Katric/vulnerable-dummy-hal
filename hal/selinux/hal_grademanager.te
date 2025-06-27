@@ -1,0 +1,9 @@
+// Definiert den Typ für den HAL-Prozess selbst
+type hal_grademanager, domain;
+
+// Definiert den Typ für die ausführbare Datei auf der Festplatte
+type hal_grademanager_exec, exec_type, file_type, vendor_file_type;
+
+// Sagt init, dass Prozesse mit dem Typ "hal_grademanager" gestartet werden dürfen
+// und dass sie dem "hal_server_domain" zugeordnet sind.
+init_daemon_domain(hal_grademanager);

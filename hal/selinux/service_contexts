@@ -1,0 +1,2 @@
+# Weise dem init-Service-Namen den korrekten SELinux-Kontext zu
+android.hardware.grademanager-service   u:object_r:hal_grademanager_service:s0

@@ -1,0 +1,2 @@
+# Weise der Binary den korrekten SELinux-Typ zu
+/vendor/bin/hw/android\.hardware\.grademanager-service  u:object_r:hal_grademanager_exec:s0
