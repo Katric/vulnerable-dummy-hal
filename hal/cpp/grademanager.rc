@@ -1,0 +1,5 @@
+service android.hardware.grademanager-service /vendor/bin/hw/android.hardware.grademanager-service
+    interface aidl android.hardware.grademanager.IGradeManager/default
+    class hal
+    user nobody
+    group nobody

@@ -13,6 +13,8 @@ namespace aidl {
             namespace grademanager {
                 class GradeManager: public BnGradeManager {
                 public:
+                    GradeManager();
+
                     ndk::ScopedAStatus getGrade(int32_t studentIdx, int32_t* out) override;
                     ndk::ScopedAStatus setGrade(int32_t studentIdx, int32_t grade) override;
                     ndk::ScopedAStatus clearGradesAndSetGradeListToNull() override;

@@ -1,0 +1,16 @@
+cc_binary {
+    name : "android.hardware.grademanager-service",
+    vendor: true,
+    vintf_fragments: ["grademanager.xml"],
+    init_rc: ["grademanager.rc"],
+    relative_install_path: "hw",
+    srcs: ["src/*.cpp"],
+    local_include_dirs: ["include"],
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libutils",
+        "libbinder_ndk",
+        "android.hardware.grademanager-V1-ndk",
+    ],
+}
