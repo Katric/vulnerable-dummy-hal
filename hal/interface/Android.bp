@@ -1,0 +1,27 @@
+aidl_interface {
+    name: "android.hardware.grademanager",
+    vendor_available: true,
+    srcs: ["android/hardware/grademanager/*.aidl"],
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: false,
+        },
+        rust: {
+            enabled: true,
+        },
+    },
+    host_supported: true,
+    owner: "richard.kats",
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}
