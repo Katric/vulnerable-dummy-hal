@@ -25,6 +25,7 @@ class HalViewModel : ViewModel() {
     val resultText = _resultText.asStateFlow()
 
     init {
+        Log.i(TAG, "Starting HAL View Model...")
         connectToHal()
     }
 
