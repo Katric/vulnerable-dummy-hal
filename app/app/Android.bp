@@ -3,7 +3,6 @@
      srcs : ["src/main/java/**/*.kt"],
      resource_dirs : ["src/main/res"],
      manifest : "src/main/AndroidManifest.xml",
-     sdk_version : "system_current",
      platform_apis : true,
      privileged : true,
      min_sdk_version : "24",
