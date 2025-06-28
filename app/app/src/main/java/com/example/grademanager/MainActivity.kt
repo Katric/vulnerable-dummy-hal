@@ -40,11 +40,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GradeManagerScreen(viewModel: HalViewModel) {
-    val halStatus by viewModel.halStatus.collectAsState()
-    val resultText by viewModel.resultText.collectAsState()
+    val halStatus: String by viewModel.halStatus.collectAsState()
+    val resultText: String by viewModel.resultText.collectAsState()
 
-    var studentIdx by remember { mutableStateOf(0) }
-    var grade by remember { mutableStateOf(0) }
+    var studentIdx by remember { mutableStateOf("0") }
+    var grade by remember { mutableStateOf("0") }
 
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -58,7 +58,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         Spacer(modifier = Modifier.height(20.dp))
         TextField(
             value = studentIdx,
-            onValueChange = { newStudentIdx ->
+            onValueChange = { newStudentIdx: String ->
                 studentIdx = newStudentIdx
             },
             placeholder = { Text("Student ID") }
