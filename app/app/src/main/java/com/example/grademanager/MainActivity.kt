@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -73,7 +72,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         )
         Spacer(modifier = Modifier.height(30.dp))
         Button(
-            onClick = {},
+            onClick = {viewModel.setGrade(Integer.parseInt(studentIdx), Integer.parseInt(grade))},
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -81,7 +80,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         }
         Spacer(modifier = Modifier.height(15.dp))
         Button(
-            onClick = {},
+            onClick = {viewModel.getGrade(Integer.parseInt(studentIdx))},
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -89,7 +88,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         }
         Spacer(modifier = Modifier.height(15.dp))
         Button(
-            onClick = {},
+            onClick = {viewModel.setGradeListToNull()},
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -97,7 +96,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         }
         Spacer(modifier = Modifier.height(15.dp))
         Button(
-            onClick = {},
+            onClick = {viewModel.freeGradeListMemory()},
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -105,7 +104,7 @@ fun GradeManagerScreen(viewModel: HalViewModel) {
         }
         Spacer(modifier = Modifier.height(15.dp))
         Button(
-            onClick = {},
+            onClick = {viewModel.initializeGradeList()},
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
