@@ -8,7 +8,8 @@ aidl_interface {
             enabled: false,
         },
         java: {
-            enabled: false,
+            sdk_version: "module_current",
+            min_sdk_version: "31",
         },
         rust: {
             enabled: true,

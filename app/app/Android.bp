@@ -3,11 +3,24 @@
      srcs : ["src/main/java/**/*.kt"],
      resource_dirs : ["src/main/res"],
      manifest : "src/main/AndroidManifest.xml",
-     sdk_version : "system_current",
-     platform_apis : true,
      privileged : true,
-     min_sdk_version : "24",
+     sdk_version: "module_current",
+     target_sdk_version: "33",
+     min_sdk_version: "30",
+     vendor : true,
+     certificate: "platform",
      static_libs : [
-
+        "android.hardware.grademanager-V1-java",
+        "androidx.core_core-ktx",
+        "androidx.compose.material3_material3",
+        "androidx.activity_activity-compose",
+        "androidx.compose.foundation_foundation",
+        "androidx.compose.material3_material3-window-size-class",
+        "androidx.compose.runtime_runtime",
+        "androidx.compose.ui_ui",
+        "androidx.lifecycle_lifecycle-runtime-compose",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "modules-utils-build_system",
+        "androidx.lifecycle_lifecycle-viewmodel-ktx"
      ]
  }

@@ -1,0 +1,14 @@
+rust_binary {
+    name : "android.hardware.grademanager-service",
+    vendor: true,
+    vintf_fragments: ["grademanager.xml"],
+    init_rc: ["grademanager.rc"],
+    relative_install_path: "hw",
+    srcs: ["src/main.rs"],
+    rustlibs: [
+        "liblogger",
+        "liblog_rust",
+        "libbinder_rs",
+        "android.hardware.grademanager-V1-rust",
+    ],
+}
