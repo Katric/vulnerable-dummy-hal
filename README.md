@@ -9,7 +9,7 @@ The following memory security vulnerabilities have been implemented:
 - Out-of-bounds read
 - Out-of-bounds write
 - Null dereference
-  Use After Free
+- Use After Free
 
 # Contents
 - HAL:
